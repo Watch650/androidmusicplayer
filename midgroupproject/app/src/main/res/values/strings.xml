@@ -10,7 +10,7 @@
     <!--    Your playlist-->
     <string name="liked_playlist">Liked songs</string>
     <string name="type_playlist">Playlist</string>
-    <string name="playlist_song_number"> • 432 songs</string>
+    <string name="playlist_song_number"> • 3 songs</string>
 
     <!--    Home Navigation-->
     <string name="home_navigation">Home</string>
