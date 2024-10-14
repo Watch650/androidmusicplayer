@@ -57,31 +57,33 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-    @Override
-    public void onStart(){
-        super.onStart();
-        Log.i("SpotifyLib", "onStart called");
-    }
-    @Override
-    public void onResume(){
-        super.onResume();
-        Log.i("SpotifyLib", "onResume called");
-    }
-    @Override
-    public void onPause(){
-        super.onPause();
-        Log.i("SpotifyLib", "onPause called");
-    }
-    @Override
-    public void onStop(){
-        super.onStop();
-        Log.i("SpotifyLib", "onStop called");
-    }
-    @Override
-    public void onDestroy(){
-        super.onDestroy();
-        Log.i("SpotifyLib", "onDestroy called");
-    }
+
+    // These are all unnecessary (I think?)
+//    @Override
+//    public void onStart(){
+//        super.onStart();
+//        Log.i("SpotifyLib", "onStart called");
+//    }
+//    @Override
+//    public void onResume(){
+//        super.onResume();
+//        Log.i("SpotifyLib", "onResume called");
+//    }
+//    @Override
+//    public void onPause(){
+//        super.onPause();
+//        Log.i("SpotifyLib", "onPause called");
+//    }
+//    @Override
+//    public void onStop(){
+//        super.onStop();
+//        Log.i("SpotifyLib", "onStop called");
+//    }
+//    @Override
+//    public void onDestroy(){
+//        super.onDestroy();
+//        Log.i("SpotifyLib", "onDestroy called");
+//    }
 
 
 }
