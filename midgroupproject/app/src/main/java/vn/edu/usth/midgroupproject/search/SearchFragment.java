@@ -70,8 +70,6 @@ public class SearchFragment extends Fragment {
         rvSongs.setAdapter(adapter);
 
         linearLayout = view.findViewById(R.id.content_wrapper);
-        linearLayout.setVisibility(View.GONE);
-
 
         return view;
     }

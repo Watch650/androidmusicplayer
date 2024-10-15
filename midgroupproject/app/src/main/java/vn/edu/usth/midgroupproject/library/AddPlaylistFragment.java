@@ -3,23 +3,19 @@ package vn.edu.usth.midgroupproject.library;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 
 import vn.edu.usth.midgroupproject.R;
-import vn.edu.usth.midgroupproject.liked.LikedSongsPageFragment;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link LibraryPageFragment#newInstance} factory method to
+ * Use the {@link AddPlaylistFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class LibraryPageFragment extends Fragment {
+public class AddPlaylistFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -30,7 +26,7 @@ public class LibraryPageFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public LibraryPageFragment() {
+    public AddPlaylistFragment() {
         // Required empty public constructor
     }
 
@@ -40,11 +36,11 @@ public class LibraryPageFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment LibraryPageFragment.
+     * @return A new instance of fragment AddPlaylistFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static LibraryPageFragment newInstance(String param1, String param2) {
-        LibraryPageFragment fragment = new LibraryPageFragment();
+    public static AddPlaylistFragment newInstance(String param1, String param2) {
+        AddPlaylistFragment fragment = new AddPlaylistFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -65,26 +61,6 @@ public class LibraryPageFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_library_page, container, false);
-
-        LinearLayout linearLayout1 = view.findViewById(R.id.liked_playlist);
-
-        linearLayout1.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                navigateToFragment(new LikedSongsPageFragment());
-            }
-        });
-
-        return view;
-    }
-
-    public void navigateToFragment(Fragment fragment) {
-        FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.library_page, fragment);
-        fragmentTransaction.addToBackStack(null);
-        fragmentTransaction.commit();
+        return inflater.inflate(R.layout.fragment_add_playlist, container, false);
     }
 }
-
-// TODO: create playlist func, create fragment to display playlist info inputs, edit playlist info (opt)
