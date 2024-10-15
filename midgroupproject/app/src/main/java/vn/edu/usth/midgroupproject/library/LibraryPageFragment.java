@@ -12,7 +12,6 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 import vn.edu.usth.midgroupproject.R;
-import vn.edu.usth.midgroupproject.liked.LikedSongsPageFragment;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -67,6 +66,8 @@ public class LibraryPageFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_library_page, container, false);
 
+
+        // Either change all of these to navigate to LikedSongLibraryActivity (somehow?) or make the Library an Activity :v
         LinearLayout linearLayout1 = view.findViewById(R.id.liked_playlist);
 
         linearLayout1.setOnClickListener(new View.OnClickListener() {

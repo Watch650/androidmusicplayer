@@ -22,4 +22,19 @@
     <!--    Search Navigation-->
     <string name="search">Search</string>
 
+
+
+    <!--    Song List-->
+    <string-array name="song_titles">
+        <item>Back In Black</item>
+        <item>Dangerously</item>
+        <item>You Give Love A Bad Name</item>
+    </string-array>
+
+    <string-array name="song_artists">
+        <item>AC/DC</item>
+        <item>Charle Puth</item>
+        <item>Bon Jovi</item>
+    </string-array>
+
 </resources>
