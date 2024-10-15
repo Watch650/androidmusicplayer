@@ -19,13 +19,28 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="20dp"/>
 
-    <androidx.appcompat.widget.Toolbar
+
+    <EditText
         android:id="@+id/searchbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_below="@id/top_view"
         android:layout_margin="10dp"
-        android:background="@drawable/rounded_corner2"/>
+        android:iconifiedByDefault="false"
+        android:queryHint="Artists, songs, podcasts"
+        android:background="@drawable/rounded_corner2"
+        tools:ignore="Autofill" />
+
+    <Button
+    android:id="@+id/search_button"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_below="@id/top_view"
+    android:layout_margin="10dp"
+    android:iconifiedByDefault="false"
+    android:background="@drawable/rounded_corner2"
+    android:text="@string/search"
+        android:visibility="invisible"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_songs"
@@ -44,11 +59,11 @@
         <TextView
             android:id="@+id/Categories"
             android:layout_width="200dp"
-            android:layout_height="40dp"
+            android:layout_height="45dp"
             android:layout_marginStart="10dp"
             android:layout_marginBottom="10dp"
             android:text="Top music genres"
-            android:textSize="15sp"
+            android:textSize="20sp"
             android:padding="10dp"
             android:textColor="@color/white" />
 
@@ -68,6 +83,7 @@
                 android:layout_row="0"
                 android:layout_column="0">
                 <ImageView
+                    android:id="@+id/Pop"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/img"
@@ -82,6 +98,7 @@
                 android:layout_column="1"
                 android:layout_gravity="end">
                 <ImageView
+                    android:id="@+id/Christian"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/img_1"
@@ -97,6 +114,7 @@
                 android:layout_gravity="end"
                 android:layout_marginTop="20dp">
                 <ImageView
+                    android:id="@+id/Rock"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/img_3"
@@ -111,6 +129,7 @@
                 android:layout_column="0"
                 android:layout_marginTop="20dp">
                 <ImageView
+                    android:id="@+id/Indie"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/img_5"
