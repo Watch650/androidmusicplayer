@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 import vn.edu.usth.midgroupproject.R;
+import vn.edu.usth.midgroupproject.liked.LikedSongLibraryActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -72,7 +73,7 @@ public class LibraryPageFragment extends Fragment {
 
         linearLayout1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                navigateToFragment(new LikedSongsPageFragment());
+                navigateToFragment(new LikedSongLibraryActivity());
             }
         });
 

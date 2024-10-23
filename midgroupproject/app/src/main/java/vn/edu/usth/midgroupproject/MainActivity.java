@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         replaceFragment(new HomePageFragment());
-
+        // TODO: make navigation from an activity to another
         binding.bottomNavigationView.setOnItemSelectedListener(item -> {
             int itemId = item.getItemId();
 

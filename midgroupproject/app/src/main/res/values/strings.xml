@@ -23,7 +23,6 @@
     <string name="search">Search</string>
 
 
-
     <!--    Song List-->
     <string-array name="song_titles">
         <item>Back In Black</item>
