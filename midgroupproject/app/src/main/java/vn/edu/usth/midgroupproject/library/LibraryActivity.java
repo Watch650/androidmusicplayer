@@ -24,14 +24,14 @@ public class LibraryActivity extends AppCompatActivity {
 
         ImageButton addButton = findViewById(R.id.addPlaylistButton);
 
-        addButton.setOnClickListener();
+//        addButton.setOnClickListener();
 
 
 
     }
     // TODO: Navigate to add playlist layout
     public void navigateToFragment(Fragment fragment) {
-        FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+        FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.library_page, fragment);
         fragmentTransaction.addToBackStack(null);

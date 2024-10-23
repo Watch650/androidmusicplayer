@@ -46,14 +46,13 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <ToggleButton
+            <ImageView
+                android:id="@+id/home_play_button_1"
                 android:layout_width="37dp"
                 android:layout_height="37dp"
-                android:background="@drawable/play_pause_toggle"
+                android:src="@drawable/playbutton"
                 android:layout_marginStart="45dp"
                 android:layout_gravity="center"
-                android:textOn=""
-                android:textOff=""
                 />
 
             <LinearLayout
@@ -62,22 +61,22 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:layout_width="69dp"
+                    android:layout_width="100dp"
                     android:layout_height="22dp"
                     android:text="As it was"
                     android:fontFamily="@font/spotify_mix"
                     android:textColor="#E1E1E1"
-                    android:layout_marginStart="45dp"
+                    android:layout_marginStart="35dp"
                     android:layout_marginTop="10dp"
                     android:textSize="16dp"/>
 
                 <TextView
-                    android:layout_width="67dp"
+                    android:layout_width="100dp"
                     android:layout_height="16dp"
                     android:text="Harry Styles"
                     android:fontFamily="@font/spotify_mix"
                     android:textColor="#E1E1E1"
-                    android:layout_marginStart="45dp"
+                    android:layout_marginStart="35dp"
                     android:textSize="12dp"/>
 
             </LinearLayout>
@@ -85,20 +84,20 @@
             <TextView
                 android:layout_width="31dp"
                 android:layout_height="20dp"
-                android:text="5:33"
+                android:text="2:43"
                 android:textSize="15dp"
                 android:fontFamily="@font/spotify_mix"
                 android:textColor="#D6D6D6"
-                android:layout_marginStart="50dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="20dp"
                 />
 
-            <ToggleButton
+            <ImageView
+                android:id="@+id/home_like_button_1"
                 android:layout_width="60dp"
-                android:layout_height="wrap_content"
+                android:layout_height="60dp"
                 android:layout_marginStart="20dp"
-                android:textOn=""
-                android:textOff=""
-                android:background="@drawable/liked_toggle"
+                android:src="@drawable/unlike"
                 />
         </LinearLayout>
 
@@ -108,14 +107,13 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <ToggleButton
+            <ImageView
+                android:id="@+id/home_play_button_2"
                 android:layout_width="37dp"
                 android:layout_height="37dp"
-                android:background="@drawable/play_pause_toggle"
+                android:src="@drawable/playbutton"
                 android:layout_marginStart="45dp"
                 android:layout_gravity="center"
-                android:textOn=""
-                android:textOff=""
                 />
 
 
@@ -125,43 +123,42 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:layout_width="69dp"
+                    android:layout_width="100dp"
                     android:layout_height="22dp"
-                    android:text="God did"
+                    android:text="Sapce Cadet"
                     android:fontFamily="@font/spotify_mix"
                     android:textColor="#E1E1E1"
-                    android:layout_marginStart="45dp"
+                    android:layout_marginStart="35dp"
                     android:layout_marginTop="10dp"
                     android:textSize="16dp"/>
 
                 <TextView
-                    android:layout_width="67dp"
+                    android:layout_width="100dp"
                     android:layout_height="16dp"
-                    android:text="DJ Khaled"
+                    android:text="Metro Boomin"
                     android:fontFamily="@font/spotify_mix"
                     android:textColor="#E1E1E1"
-                    android:layout_marginStart="45dp"
+                    android:layout_marginStart="35dp"
                     android:textSize="12dp"/>
 
             </LinearLayout>
 
             <TextView
                 android:layout_width="31dp"
-                android:layout_height="20dp"
-                android:text="3:43"
-                android:textSize="15dp"
-                android:fontFamily="@font/spotify_mix"
-                android:textColor="#D6D6D6"
-                android:layout_marginStart="50dp"
-                />
-
-            <ToggleButton
-                android:layout_width="60dp"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/spotify_mix"
+                android:text="3:23"
+                android:textColor="#D6D6D6"
+                android:textSize="15dp" />
+
+            <ImageView
+                android:id="@+id/home_like_button_2"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:layout_marginStart="20dp"
-                android:textOn=""
-                android:textOff=""
-                android:background="@drawable/liked_toggle"
+                android:src="@drawable/unlike"
                 />
 
         </LinearLayout>
