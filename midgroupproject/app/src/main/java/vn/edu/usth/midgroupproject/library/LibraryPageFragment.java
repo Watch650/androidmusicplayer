@@ -73,7 +73,7 @@ public class LibraryPageFragment extends Fragment {
 
         linearLayout1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                navigateToFragment(new LikedSongLibraryActivity());
+//                navigateToFragment(new LikedSongLibraryActivity());
             }
         });
 
