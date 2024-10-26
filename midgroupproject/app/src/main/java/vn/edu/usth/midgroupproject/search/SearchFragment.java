@@ -87,6 +87,7 @@ public class SearchFragment extends Fragment {
 
         linearLayout = view.findViewById(R.id.content_wrapper);
 
+
         searchResults = new ArrayList<>();
         adapter = new SongAdapter(searchResults, result -> {
             String songName = result.get("song");
@@ -94,6 +95,7 @@ public class SearchFragment extends Fragment {
         });
         rvSongs.setAdapter(adapter);
         rvSongs.setLayoutManager(new LinearLayoutManager(getContext()));
+
 
         searchButton.setOnClickListener(v -> performSearch());
 
