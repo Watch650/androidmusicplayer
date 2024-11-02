@@ -16,6 +16,7 @@
         android:textColor="@color/white"
         android:textAlignment="center"
         android:textSize="20dp"
+        android:fontFamily="@font/spotify_mix"
         android:text="Give your playlist a name"/>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -30,8 +31,9 @@
             android:layout_height="wrap_content"
             android:id="@+id/input_add_playlist"
             android:textAlignment="center"
+            android:fontFamily="@font/spotify_mix"
             android:hint="Your playlist name..."
-            android:textColorHint="@color/black"
+            android:textColorHint="@color/white"
             />
 
     </com.google.android.material.textfield.TextInputLayout>
