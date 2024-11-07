@@ -1,40 +1,55 @@
 package vn.edu.usth.midgroupproject.library;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
+
+import com.google.android.material.bottomsheet.BottomSheetDialog;
+import com.google.android.material.button.MaterialButton;
 
 import vn.edu.usth.midgroupproject.R;
+import vn.edu.usth.midgroupproject.liked.LikedSongLibraryActivity;
 
 public class LibraryActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_library);
 
-        ImageButton addButton = findViewById(R.id.addPlaylistButton);
+        MaterialButton addButton = findViewById(R.id.addPlaylistButton);
 
-//        addButton.setOnClickListener();
+        addButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                try {
+                    BottomSheetDialog bsdAddBtn = new BottomSheetDialog(LibraryActivity.this);
+                    View view1 = LayoutInflater.from(LibraryActivity.this).inflate(R.layout.layout_add_playlist, null);
+                    bsdAddBtn.setContentView(view1);
+                    bsdAddBtn.show();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
 
+//                TextInputLayout textInputLayout = view1.findViewById(R.id.textFieldLayout);
+//                TextInputEditText editTextAdd = view1.findViewById(R.id.input_add_playlist);
+            }
+        });
 
+        LinearLayout toLikedPlaylist = findViewById(R.id.liked_playlist);
 
-    }
-    // TODO: Navigate to add playlist layout
-    public void navigateToFragment(Fragment fragment) {
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.library_page, fragment);
-        fragmentTransaction.addToBackStack(null);
-        fragmentTransaction.commit();
+        toLikedPlaylist.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(LibraryActivity.this, LikedSongLibraryActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }

@@ -1,5 +1,6 @@
 package vn.edu.usth.midgroupproject;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -12,6 +13,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 import vn.edu.usth.midgroupproject.databinding.ActivityMainBinding;
 import vn.edu.usth.midgroupproject.home.HomePageFragment;
+import vn.edu.usth.midgroupproject.library.LibraryActivity;
 import vn.edu.usth.midgroupproject.library.LibraryPageFragment;
 import vn.edu.usth.midgroupproject.search.SearchFragment;
 
@@ -47,7 +49,8 @@ public class MainActivity extends AppCompatActivity {
                 replaceFragment(new SearchFragment());
             }
             else if (itemId == R.id.library){
-                replaceFragment(new LibraryPageFragment());
+                Intent intent = new Intent(MainActivity.this, LibraryActivity.class);
+                startActivity(intent);
             }
             else {
                 return false;

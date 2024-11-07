@@ -9,7 +9,6 @@
     android:background="@drawable/gradient_bg"
     android:orientation="vertical">
 
-    <!--  Search fragment -->
     <LinearLayout
         android:id="@+id/search_bar"
         android:layout_width="match_parent"
@@ -53,19 +52,18 @@
 
             </ImageButton>
 
-            <ImageButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/addPlaylistButton"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginStart="25dp"
                 android:background="@drawable/add">
-            </ImageButton>
+            </com.google.android.material.button.MaterialButton>
 
         </LinearLayout>
 
     </LinearLayout>
 
-    <!--buttons-->
     <LinearLayout
         android:id="@+id/buttons"
         android:layout_width="match_parent"
@@ -96,7 +94,6 @@
 
     </LinearLayout>
 
-    <!-- playlist -->
     <ScrollView
         android:id="@+id/playlist"
         android:layout_below="@id/buttons"

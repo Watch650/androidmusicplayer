@@ -9,9 +9,14 @@ import androidx.fragment.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
+import com.google.android.material.bottomsheet.BottomSheetDialog;
+import com.google.android.material.button.MaterialButton;
+
 import vn.edu.usth.midgroupproject.R;
+import vn.edu.usth.midgroupproject.liked.ChristianSongsPageFragment;
 import vn.edu.usth.midgroupproject.liked.LikedSongLibraryActivity;
 
 /**
@@ -73,9 +78,19 @@ public class LibraryPageFragment extends Fragment {
 
         linearLayout1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-//                navigateToFragment(new LikedSongLibraryActivity());
+                navigateToFragment(new ChristianSongsPageFragment());
             }
         });
+
+        MaterialButton addButton = view.findViewById(R.id.addPlaylistButton);
+
+//        addButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                BottomSheetDialog bsdAddBtn = new BottomSheetDialog(LibraryPageFragment.this);
+//                View view1 = LayoutInflater.from((LibraryPageFragment.this).inflate(R.layout))
+//            }
+//        });
 
         return view;
     }
