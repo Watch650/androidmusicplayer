@@ -1,4 +1,4 @@
-package vn.edu.usth.midgroupproject.liked;
+package vn.edu.usth.midgroupproject.playlist.RecyclerView;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -33,7 +33,7 @@ public class Song_RecyclerViewAdapter extends RecyclerView.Adapter<Song_Recycler
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         // Inflate the layout (Giving a look to the rows)
         LayoutInflater inflater = LayoutInflater.from(context);
-        View view = inflater.inflate(R.layout.recycler_view_song_row, parent, false);
+        View view = inflater.inflate(R.layout.layout_song_list_view, parent, false);
         return new MyViewHolder(view, recyclerViewInterface);
     }
 

@@ -4,17 +4,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.button.MaterialButton;
 
 import vn.edu.usth.midgroupproject.R;
-import vn.edu.usth.midgroupproject.liked.LikedSongLibraryActivity;
+import vn.edu.usth.midgroupproject.playlist.LikedSongPlaylistActivity;
 
 public class LibraryActivity extends AppCompatActivity {
 
@@ -47,7 +45,7 @@ public class LibraryActivity extends AppCompatActivity {
         toLikedPlaylist.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(LibraryActivity.this, LikedSongLibraryActivity.class);
+                Intent intent = new Intent(LibraryActivity.this, LikedSongPlaylistActivity.class);
                 startActivity(intent);
             }
         });
