@@ -1,4 +1,4 @@
-package vn.edu.usth.midgroupproject.liked;
+package vn.edu.usth.midgroupproject.playlist.RecyclerView;
 
 public interface RecyclerViewInterface {
     void onItemClick(int position);

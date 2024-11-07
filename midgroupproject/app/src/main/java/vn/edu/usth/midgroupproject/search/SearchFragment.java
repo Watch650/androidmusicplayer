@@ -2,9 +2,6 @@ package vn.edu.usth.midgroupproject.search;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -20,7 +17,6 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.appcompat.widget.SearchView;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
@@ -40,10 +36,10 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 import vn.edu.usth.midgroupproject.R;
-import vn.edu.usth.midgroupproject.liked.ChristianSongsPageFragment;
-import vn.edu.usth.midgroupproject.liked.IndieSongsPageFragment;
-import vn.edu.usth.midgroupproject.liked.PopSongsPageFragment;
-import vn.edu.usth.midgroupproject.liked.RockSongsPageFragment;
+import vn.edu.usth.midgroupproject.search.search_fragments.ChristianSongsPageFragment;
+import vn.edu.usth.midgroupproject.search.search_fragments.IndieSongsPageFragment;
+import vn.edu.usth.midgroupproject.search.search_fragments.PopSongsPageFragment;
+import vn.edu.usth.midgroupproject.search.search_fragments.RockSongsPageFragment;
 
 public class SearchFragment extends Fragment {
 

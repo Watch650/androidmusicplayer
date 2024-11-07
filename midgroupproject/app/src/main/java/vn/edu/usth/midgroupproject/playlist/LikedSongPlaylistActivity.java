@@ -1,4 +1,4 @@
-package vn.edu.usth.midgroupproject.liked;
+package vn.edu.usth.midgroupproject.playlist;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,18 +10,23 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 import vn.edu.usth.midgroupproject.R;
+import vn.edu.usth.midgroupproject.playlist.RecyclerView.RecyclerViewInterface;
+import vn.edu.usth.midgroupproject.playlist.RecyclerView.SongModel;
+import vn.edu.usth.midgroupproject.playlist.RecyclerView.Song_RecyclerViewAdapter;
 import vn.edu.usth.midgroupproject.songs.SongActivity;
 
-public class LikedSongLibraryActivity extends AppCompatActivity implements RecyclerViewInterface{
+public class LikedSongPlaylistActivity extends AppCompatActivity implements RecyclerViewInterface {
 
     ArrayList<SongModel> songModels = new ArrayList<>();
 
+
+    // Song images array
     int[] songImages = {R.drawable.song1, R.drawable.song3, R.drawable.song2};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_liked_songs_page);
+        setContentView(R.layout.activity_playlist);
 
         RecyclerView recyclerView = findViewById(R.id.mRecycleView);
 
@@ -45,7 +50,7 @@ public class LikedSongLibraryActivity extends AppCompatActivity implements Recyc
 
     @Override
     public void onItemClick(int position) {
-        Intent intent = new Intent(LikedSongLibraryActivity.this, SongActivity.class);
+        Intent intent = new Intent(LikedSongPlaylistActivity.this, SongActivity.class);
 
         intent.putExtra("TITLE", songModels.get(position).getSongTitle());
         intent.putExtra("ARTIST", songModels.get(position).getSongArtist());

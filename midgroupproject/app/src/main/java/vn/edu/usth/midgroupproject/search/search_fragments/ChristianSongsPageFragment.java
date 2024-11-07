@@ -1,4 +1,4 @@
-package vn.edu.usth.midgroupproject.liked;
+package vn.edu.usth.midgroupproject.search.search_fragments;
 
 import android.os.Bundle;
 
@@ -16,10 +16,10 @@ import vn.edu.usth.midgroupproject.songs.SongFragment;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link RockSongsPageFragment#newInstance} factory method to
+ * Use the {@link ChristianSongsPageFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class RockSongsPageFragment extends Fragment {
+public class ChristianSongsPageFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -30,7 +30,7 @@ public class RockSongsPageFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public RockSongsPageFragment() {
+    public ChristianSongsPageFragment() {
         // Required empty public constructor
     }
 
@@ -40,11 +40,11 @@ public class RockSongsPageFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment RockSongsPageFragment.
+     * @return A new instance of fragment ChristianSongsPageFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static RockSongsPageFragment newInstance(String param1, String param2) {
-        RockSongsPageFragment fragment = new RockSongsPageFragment();
+    public static ChristianSongsPageFragment newInstance(String param1, String param2) {
+        ChristianSongsPageFragment fragment = new ChristianSongsPageFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -65,7 +65,7 @@ public class RockSongsPageFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view =  inflater.inflate(R.layout.fragment_rock_songs_page, container, false);
+        View view =  inflater.inflate(R.layout.fragment_christian_songs_page, container, false);
 
         RelativeLayout relativeLayout1 = view.findViewById(R.id.song1);
         RelativeLayout relativeLayout2 = view.findViewById(R.id.song2);
@@ -98,7 +98,7 @@ public class RockSongsPageFragment extends Fragment {
     public void navigateToFragment(Fragment fragment) {
         FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.fragment_rockSongsPage, fragment);
+        fragmentTransaction.replace(R.id.fragment_christianSongsPage, fragment);
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
     }

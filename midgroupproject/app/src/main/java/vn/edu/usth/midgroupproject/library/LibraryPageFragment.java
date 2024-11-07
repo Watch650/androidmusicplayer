@@ -9,15 +9,12 @@ import androidx.fragment.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
-import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.button.MaterialButton;
 
 import vn.edu.usth.midgroupproject.R;
-import vn.edu.usth.midgroupproject.liked.ChristianSongsPageFragment;
-import vn.edu.usth.midgroupproject.liked.LikedSongLibraryActivity;
+import vn.edu.usth.midgroupproject.search.search_fragments.ChristianSongsPageFragment;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -73,7 +70,7 @@ public class LibraryPageFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_library_page, container, false);
 
 
-        // Either change all of these to navigate to LikedSongLibraryActivity (somehow?) or make the Library an Activity :v
+        // Either change all of these to navigate to LikedSongPlaylistActivity (somehow?) or make the Library an Activity :v
         LinearLayout linearLayout1 = view.findViewById(R.id.liked_playlist);
 
         linearLayout1.setOnClickListener(new View.OnClickListener() {

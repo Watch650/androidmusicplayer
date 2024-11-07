@@ -8,7 +8,7 @@
     android:background="#1C1A1B"
     android:orientation="vertical"
     tools:context=".songs.SongActivity"
-    android:id="@+id/song_fragment">
+    android:id="@+id/song_view">
 
     <RelativeLayout
         android:layout_width="match_parent"

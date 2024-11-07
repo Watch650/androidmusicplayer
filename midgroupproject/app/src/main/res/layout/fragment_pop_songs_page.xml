@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient_bg"
-    tools:context=".liked.LikedSongsPageFragment">
+    tools:context=".playlist.LikedSongsPageFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,7 +19,7 @@
             android:id="@+id/liked_song"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:context=".liked.LikedSongsTitle">
+            tools:context=".playlist.LikedSongsTitle">
 
             <LinearLayout
                 android:id="@+id/main_frame"
@@ -73,7 +73,7 @@
                     android:paddingEnd="20dp">
 
                     <ImageView
-                        android:id="@+id/shuffle"
+                        android:id="@+id/btn_play_shuffle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
@@ -98,7 +98,7 @@
                 android:paddingStart="0dp"
                 android:paddingEnd="0dp"
                 android:background="#00000000"
-                tools:context=".liked.SongsList">
+                tools:context=".playlist.SongsList">
 
                 <!--Song tile 1-->
                 <RelativeLayout

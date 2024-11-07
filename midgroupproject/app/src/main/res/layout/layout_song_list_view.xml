@@ -73,6 +73,8 @@
                         android:fontFamily="@font/spotify_mix"
                         android:textSize="15sp"
                         android:textColor="#B3B3B3"
+                        android:maxLines="1"
+                        android:ellipsize="end"
                         android:text="AC/DC"/>
                 </LinearLayout>
             </LinearLayout>
@@ -89,7 +91,7 @@
                     android:id="@+id/song_status"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
-                    android:background="@drawable/liked"/>
+                    android:background="@drawable/like_off"/>
                 <ImageButton
                     android:id="@+id/song_detail"
                     android:layout_width="20dp"
