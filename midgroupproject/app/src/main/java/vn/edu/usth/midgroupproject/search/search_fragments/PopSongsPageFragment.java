@@ -12,7 +12,7 @@ import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 
 import vn.edu.usth.midgroupproject.R;
-import vn.edu.usth.midgroupproject.songs.SongFragment;
+import vn.edu.usth.midgroupproject.song_player.SongFragment;
 
 /**
  * A simple {@link Fragment} subclass.

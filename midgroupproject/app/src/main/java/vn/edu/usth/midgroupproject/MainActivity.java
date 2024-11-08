@@ -1,8 +1,6 @@
 package vn.edu.usth.midgroupproject;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 
 
 import androidx.activity.EdgeToEdge;
@@ -13,8 +11,8 @@ import androidx.fragment.app.FragmentTransaction;
 
 import vn.edu.usth.midgroupproject.databinding.ActivityMainBinding;
 import vn.edu.usth.midgroupproject.home.HomePageFragment;
-import vn.edu.usth.midgroupproject.library.LibraryActivity;
 import vn.edu.usth.midgroupproject.library.LibraryPageFragment;
+import vn.edu.usth.midgroupproject.playlist.PlaylistFragment;
 import vn.edu.usth.midgroupproject.search.SearchFragment;
 
 public class MainActivity extends AppCompatActivity {
@@ -38,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         replaceFragment(new HomePageFragment());
-        // TODO: make navigation from an activity to another
+        // TODO: make navigation from a fragment to another
         binding.bottomNavigationView.setOnItemSelectedListener(item -> {
             int itemId = item.getItemId();
 
@@ -49,8 +47,9 @@ public class MainActivity extends AppCompatActivity {
                 replaceFragment(new SearchFragment());
             }
             else if (itemId == R.id.library){
-                Intent intent = new Intent(MainActivity.this, LibraryActivity.class);
-                startActivity(intent);
+//                Intent intent = new Intent(MainActivity.this, LibraryActivity.class);
+//                startActivity(intent);
+                replaceFragment(new LibraryPageFragment());
             }
             else {
                 return false;
@@ -58,35 +57,6 @@ public class MainActivity extends AppCompatActivity {
             return true;
         });
 
-
     }
-
-    // These are all unnecessary (I think?)
-//    @Override
-//    public void onStart(){
-//        super.onStart();
-//        Log.i("SpotifyLib", "onStart called");
-//    }
-//    @Override
-//    public void onResume(){
-//        super.onResume();
-//        Log.i("SpotifyLib", "onResume called");
-//    }
-//    @Override
-//    public void onPause(){
-//        super.onPause();
-//        Log.i("SpotifyLib", "onPause called");
-//    }
-//    @Override
-//    public void onStop(){
-//        super.onStop();
-//        Log.i("SpotifyLib", "onStop called");
-//    }
-//    @Override
-//    public void onDestroy(){
-//        super.onDestroy();
-//        Log.i("SpotifyLib", "onDestroy called");
-//    }
-
 
 }

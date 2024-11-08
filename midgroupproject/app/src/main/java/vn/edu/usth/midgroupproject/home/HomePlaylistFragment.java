@@ -16,10 +16,10 @@ import vn.edu.usth.midgroupproject.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link PlayListFragment#newInstance} factory method to
+ * Use the {@link HomePlaylistFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class PlayListFragment extends Fragment {
+public class HomePlaylistFragment extends Fragment {
     private boolean isLiked = false;
     private boolean isPlaying = false;
     MediaPlayer mediaPlayer1, mediaPlayer2;
@@ -29,7 +29,7 @@ public class PlayListFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_play_list, container, false);
+        View view = inflater.inflate(R.layout.fragment_home_play_list, container, false);
 
         return view;
     }

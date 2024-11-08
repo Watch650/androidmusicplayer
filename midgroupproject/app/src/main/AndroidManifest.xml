@@ -12,11 +12,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Groupproject"
         tools:targetApi="31">
-        <activity android:name=".playlist.LikedSongPlaylistActivity"
-            android:exported="false" />
+<!--        <activity android:name=".playlist.LikedSongPlaylistActivity"-->
+<!--            android:exported="false" />-->
 
         <activity
-            android:name=".library.LibraryActivity"
+            android:name=".song_player.SongActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
