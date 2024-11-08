@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageButton;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -21,6 +23,7 @@ import vn.edu.usth.midgroupproject.song_player.SongActivity;
 public class PlaylistFragment extends Fragment implements RecyclerViewInterface {
 
     ArrayList<SongModel> songModels = new ArrayList<>();
+    Song_RecyclerViewAdapter adapter;
 
     // Song images array
     int[] songImages = {R.drawable.song1, R.drawable.song3, R.drawable.song2};
@@ -33,10 +36,18 @@ public class PlaylistFragment extends Fragment implements RecyclerViewInterface 
         RecyclerView recyclerView = view.findViewById(R.id.mRecycleView);
 
         SetupSongModels();
-        Song_RecyclerViewAdapter adapter = new Song_RecyclerViewAdapter(requireContext(),
-                songModels, this);
+
+        adapter = new Song_RecyclerViewAdapter(requireContext(), songModels, this);
+
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(requireContext()));
+
+        // Find the button and set an OnClickListener
+        ImageButton addSongButton = view.findViewById(R.id.add_button);
+        addSongButton.setOnClickListener(v -> {
+            // Add a new song when the button is clicked
+            addSong("New Song Title", "New Artist", R.drawable.song3);
+        });
 
         return view;
     }
@@ -50,6 +61,16 @@ public class PlaylistFragment extends Fragment implements RecyclerViewInterface 
                     songArtists[i],
                     songImages[i]));
         }
+    }
+
+    // Method to add a new song
+    public void addSong(String title, String artist, int imageResId) {
+        // Create a new SongModel object
+        SongModel newSong = new SongModel(title, artist, imageResId);
+        // Add it to the song list
+        songModels.add(newSong);
+        // Notify the adapter about the new item
+        adapter.notifyItemInserted(songModels.size() - 1);
     }
 
     @Override
