@@ -5,7 +5,7 @@
     android:id="@+id/library_page"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".library.LibraryPageFragment"
+    tools:context=".ui.library.LibraryPageFragment"
     android:background="@drawable/gradient_bg"
     android:orientation="vertical">
 
