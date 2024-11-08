@@ -16,7 +16,7 @@ import vn.edu.usth.midgroupproject.R;
 import vn.edu.usth.midgroupproject.playlist.RecyclerView.RecyclerViewInterface;
 import vn.edu.usth.midgroupproject.playlist.RecyclerView.SongModel;
 import vn.edu.usth.midgroupproject.playlist.RecyclerView.Song_RecyclerViewAdapter;
-import vn.edu.usth.midgroupproject.songs.SongActivity;
+import vn.edu.usth.midgroupproject.song_player.SongActivity;
 
 public class PlaylistFragment extends Fragment implements RecyclerViewInterface {
 

@@ -16,7 +16,7 @@
 <!--            android:exported="false" />-->
 
         <activity
-            android:name=".library.LibraryActivity"
+            android:name=".song_player.SongActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

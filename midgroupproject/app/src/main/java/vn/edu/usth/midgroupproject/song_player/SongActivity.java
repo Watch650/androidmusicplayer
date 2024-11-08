@@ -1,4 +1,4 @@
-package vn.edu.usth.midgroupproject.songs;
+package vn.edu.usth.midgroupproject.song_player;
 
 import android.media.MediaPlayer;
 import android.os.Bundle;
