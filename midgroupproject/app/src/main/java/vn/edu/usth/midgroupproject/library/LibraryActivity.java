@@ -22,7 +22,7 @@ public class LibraryActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_library_page);
+        setContentView(R.layout.fragment_library);
 
         MaterialButton addButton = findViewById(R.id.addPlaylistButton);
 
