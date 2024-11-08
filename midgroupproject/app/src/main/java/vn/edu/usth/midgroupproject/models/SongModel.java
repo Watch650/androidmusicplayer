@@ -1,21 +1,61 @@
 package vn.edu.usth.midgroupproject.models;
 
-public class SongModel {
-    String songTitle;
-    String songArtist;
-    String songImage; // Change to String for URL
-    String mp3Url;
+import com.google.gson.annotations.SerializedName;
 
-    public SongModel(String songTitle, String songArtist, String songImage, String mp3Url) {
-        this.songTitle = songTitle;
-        this.songArtist = songArtist;
-        this.songImage = songImage;
-        this.mp3Url = mp3Url;
+public class SongModel {
+    @SerializedName("id")
+    private int id;
+
+    @SerializedName("name")
+    private String songTitle;
+
+    @SerializedName("artist")
+    private String songArtist;
+
+    @SerializedName("image")
+    private String songImage;
+
+    @SerializedName("mp3Url")
+    private String mp3Url;
+
+    // Getters and setters
+    public int getId() {
+        return id;
     }
 
-    // Getters
-    public String getSongTitle() { return songTitle; }
-    public String getSongArtist() { return songArtist; }
-    public String getSongImage() { return songImage; }
-    public String getMp3Url() { return mp3Url; }
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getSongTitle() {
+        return songTitle;
+    }
+
+    public void setSongTitle(String songTitle) {
+        this.songTitle = songTitle;
+    }
+
+    public String getSongArtist() {
+        return songArtist;
+    }
+
+    public void setSongArtist(String songArtist) {
+        this.songArtist = songArtist;
+    }
+
+    public String getSongImage() {
+        return songImage;
+    }
+
+    public void setSongImage(String songImage) {
+        this.songImage = songImage;
+    }
+
+    public String getMp3Url() {
+        return mp3Url;
+    }
+
+    public void setMp3Url(String mp3Url) {
+        this.mp3Url = mp3Url;
+    }
 }

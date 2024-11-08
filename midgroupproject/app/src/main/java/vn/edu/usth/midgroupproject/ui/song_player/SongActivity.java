@@ -10,6 +10,8 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.bumptech.glide.Glide;
+
 import java.io.IOException;
 
 import vn.edu.usth.midgroupproject.R;
@@ -36,7 +38,11 @@ public class SongActivity extends AppCompatActivity {
 
         tvTitle.setText(title);
         tvArtist.setText(artist);
-        imageView.setImageResource(getResources().getIdentifier(image, "drawable", getPackageName()));
+
+        // Load image using Glide
+        Glide.with(this)
+                .load("https://androidmusicplayer-be.vercel.app" + image)  // Add base URL here
+                .into(imageView);
 
         // Setup Like button
         ImageView likeButton = findViewById(R.id.like_button);
@@ -51,7 +57,7 @@ public class SongActivity extends AppCompatActivity {
 
         // Initialize MediaPlayer for the mp3Url
         ImageView playButton = findViewById(R.id.play_button);
-        setupMediaPlayer(mp3Url);
+        setupMediaPlayer("https://androidmusicplayer-be.vercel.app" + mp3Url); // Add base URL here
 
         // Play/Pause button behavior
         playButton.setOnClickListener(v -> {
