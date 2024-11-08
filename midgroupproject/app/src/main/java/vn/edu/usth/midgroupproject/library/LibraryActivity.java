@@ -1,25 +1,28 @@
 package vn.edu.usth.midgroupproject.library;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.button.MaterialButton;
 
 import vn.edu.usth.midgroupproject.R;
-import vn.edu.usth.midgroupproject.playlist.LikedSongPlaylistActivity;
+import vn.edu.usth.midgroupproject.playlist.PlaylistFragment;
+//import vn.edu.usth.midgroupproject.playlist.LikedSongPlaylistActivity;
+
 
 public class LibraryActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_library);
+        setContentView(R.layout.fragment_library_page);
 
         MaterialButton addButton = findViewById(R.id.addPlaylistButton);
 
@@ -45,8 +48,12 @@ public class LibraryActivity extends AppCompatActivity {
         toLikedPlaylist.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(LibraryActivity.this, LikedSongPlaylistActivity.class);
-                startActivity(intent);
+//                Intent intent = new Intent(LibraryActivity.this, LikedSongPlaylistActivity.class);
+//                startActivity(intent);
+                PlaylistFragment PlaylistFragment = new PlaylistFragment();
+
+                FragmentManager fragmentManager = getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
             }
         });
     }
