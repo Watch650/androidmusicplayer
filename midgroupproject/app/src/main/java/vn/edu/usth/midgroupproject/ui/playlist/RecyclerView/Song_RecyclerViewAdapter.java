@@ -51,16 +51,10 @@ public class Song_RecyclerViewAdapter extends RecyclerView.Adapter<Song_Recycler
         holder.tvArtist.setText(song.getSongArtist());
 
         // Load image using Glide
-        String imageUrl = song.getSongImage();
-        if (imageUrl != null && !imageUrl.isEmpty()) {
-            Glide.with(context)
-                    .load(imageUrl)
-                    .into(holder.imageView);
-        } else {
-            Glide.with(context)
-                    .load(R.drawable.song3)  // Fallback to a default image
-                    .into(holder.imageView);
-        }
+        Glide.with(context)
+                .load("https://androidmusicplayer-be.vercel.app" + songModels.get(position).getSongImage()) // Append the base URL to the image path
+                .into(holder.imageView);
+
     }
 
 

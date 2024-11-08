@@ -70,8 +70,9 @@ public class PlaylistFragment extends Fragment implements RecyclerViewInterface 
             @Override
             public void onResponse(Call<List<SongModel>> call, Response<List<SongModel>> response) {
                 if (response.isSuccessful() && response.body() != null) {
-                    // Log the response
-                    Log.d("API Response", "Songs fetched: " + response.body().size());
+                    // Log the response to check its contents
+                    Log.d("API Response", "Songs fetched: " + response.body());
+
                     songModels.addAll(response.body());
                     adapter.notifyDataSetChanged();
                 } else {
@@ -88,17 +89,18 @@ public class PlaylistFragment extends Fragment implements RecyclerViewInterface 
 
 
 
+
     // Method to add a new song
-    public void addSong(String title, String artist, String imageUrl , String mp3Url) {
-        // Create a new SongModel object, now passing mp3Url as well
-        SongModel newSong = new SongModel(title, artist, imageUrl, mp3Url);
-
-        // Add it to the song list
-        songModels.add(newSong);
-
-        // Notify the adapter about the new item
-        adapter.notifyItemInserted(songModels.size() - 1);
-    }
+//    public void addSong(String title, String artist, String imageUrl , String mp3Url) {
+//        // Create a new SongModel object, now passing mp3Url as well
+//        SongModel newSong = new SongModel(title, artist, imageUrl, mp3Url);
+//
+//        // Add it to the song list
+//        songModels.add(newSong);
+//
+//        // Notify the adapter about the new item
+//        adapter.notifyItemInserted(songModels.size() - 1);
+//    }
 
     @Override
     public void onItemClick(int position) {

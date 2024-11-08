@@ -5,7 +5,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitClient {
 
-    private static final String BASE_URL = "http://localhost:3000/";  // Server's URL
+    private static final String BASE_URL = "https://androidmusicplayer-be.vercel.app";  // Server's URL
     private static Retrofit retrofit;
 
     // Get Retrofit instance
