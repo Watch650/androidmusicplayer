@@ -7,7 +7,7 @@
     android:paddingTop="20dp"
     android:background="#1C1A1B"
     android:orientation="vertical"
-    tools:context=".song_player.SongActivity"
+    tools:context=".ui.song_player.SongActivity"
     android:id="@+id/song_view">
 
     <RelativeLayout
