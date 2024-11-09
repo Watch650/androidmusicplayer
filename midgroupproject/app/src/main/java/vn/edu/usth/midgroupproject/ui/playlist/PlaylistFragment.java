@@ -117,11 +117,8 @@ public class PlaylistFragment extends Fragment implements RecyclerViewInterface 
     @Override
     public void onItemClick(int position) {
         Intent intent = new Intent(requireContext(), SongActivity.class);
-        SongModel song = songModels.get(position);
-        intent.putExtra("TITLE", song.getSongTitle());
-        intent.putExtra("ARTIST", song.getSongArtist());
-        intent.putExtra("IMAGE", song.getSongImage());
-        intent.putExtra("MP3_URL", song.getMp3Url());
+        intent.putParcelableArrayListExtra("SONG_LIST", songModels);
+        intent.putExtra("CURRENT_POSITION", position);
         startActivity(intent);
     }
 }
