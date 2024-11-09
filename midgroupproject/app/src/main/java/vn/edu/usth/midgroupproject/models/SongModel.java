@@ -4,7 +4,6 @@ import com.google.gson.annotations.SerializedName;
 
 import android.os.Parcel;
 import android.os.Parcelable;
-import com.google.gson.annotations.SerializedName;
 
 public class SongModel implements Parcelable {
     @SerializedName("id")
