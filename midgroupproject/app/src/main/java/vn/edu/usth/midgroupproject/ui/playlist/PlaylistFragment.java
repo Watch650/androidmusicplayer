@@ -38,10 +38,9 @@ public class PlaylistFragment extends Fragment implements RecyclerViewInterface 
     ArrayList<SongModel> songModels = new ArrayList<>();
     Song_RecyclerViewAdapter adapter;
     SongApiService songApiService;
-
+    ProgressBar progressBar;
     private TextView playlistSongNumber;
 
-    ProgressBar progressBar;
 
 
     // Song images array
@@ -52,10 +51,10 @@ public class PlaylistFragment extends Fragment implements RecyclerViewInterface 
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_playlist, container, false);
 
-
         playlistSongNumber = view.findViewById(R.id.playlist_song_number);
 
         progressBar = view.findViewById(R.id.progressBar);
+
 
         RecyclerView recyclerView = view.findViewById(R.id.mRecycleView);
         adapter = new Song_RecyclerViewAdapter(requireContext(), songModels, this);
@@ -79,6 +78,7 @@ public class PlaylistFragment extends Fragment implements RecyclerViewInterface 
     }
 
 
+
     private void fetchSongsFromApi() {
         // Use AsyncTask to fetch data in the background
         new FetchSongsTask().execute();
@@ -94,6 +94,7 @@ public class PlaylistFragment extends Fragment implements RecyclerViewInterface 
         @Override
         protected List<SongModel> doInBackground(Void... voids) {
             try {
+
                 // Make the API call in the background (synchronously)
                 Call<List<SongModel>> call = songApiService.getSongs();
                 Response<List<SongModel>> response = call.execute(); // Synchronous call
@@ -106,6 +107,7 @@ public class PlaylistFragment extends Fragment implements RecyclerViewInterface 
             }
             return null; // Return null if fetching failed
         }
+
 
         @Override
         protected void onPostExecute(List<SongModel> fetchedSongs) {
