@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
@@ -33,6 +34,7 @@ public class PlaylistFragment extends Fragment implements RecyclerViewInterface 
     ArrayList<SongModel> songModels = new ArrayList<>();
     Song_RecyclerViewAdapter adapter;
     SongApiService songApiService;
+    private TextView playlistSongNumber;
 
     // Song images array
 //    int[] songImages = {R.drawable.song1, R.drawable.song3, R.drawable.song2};
@@ -42,6 +44,7 @@ public class PlaylistFragment extends Fragment implements RecyclerViewInterface 
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_playlist, container, false);
 
+        playlistSongNumber = view.findViewById(R.id.playlist_song_number);
         RecyclerView recyclerView = view.findViewById(R.id.mRecycleView);
         adapter = new Song_RecyclerViewAdapter(requireContext(), songModels, this);
         recyclerView.setAdapter(adapter);
@@ -70,11 +73,14 @@ public class PlaylistFragment extends Fragment implements RecyclerViewInterface 
             @Override
             public void onResponse(Call<List<SongModel>> call, Response<List<SongModel>> response) {
                 if (response.isSuccessful() && response.body() != null) {
-                    // Log the response to check its contents
+                    // Log the response to check contents for debugging
                     Log.d("API Response", "Songs fetched: " + response.body());
 
                     songModels.addAll(response.body());
                     adapter.notifyDataSetChanged();
+
+                    // Update the song count TextView
+                    updateSongCount();
                 } else {
                     Toast.makeText(requireContext(), "Failed to load songs", Toast.LENGTH_SHORT).show();
                 }
@@ -101,6 +107,12 @@ public class PlaylistFragment extends Fragment implements RecyclerViewInterface 
 //        // Notify the adapter about the new item
 //        adapter.notifyItemInserted(songModels.size() - 1);
 //    }
+
+    private void updateSongCount() {
+        // Update the TextView to show the number of items in songModels
+        String songCountText = songModels.size() + " songs";
+        playlistSongNumber.setText(songCountText);
+    }
 
     @Override
     public void onItemClick(int position) {
